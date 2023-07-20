@@ -29,10 +29,12 @@ $ENV:PQ_LIB_DIR="c:\Program Files\PostgreSQL\15\lib"
 
 **Database Url**
 
-Set up the database url in .env
+Set up the database url in `Rocket.toml`
 
-```rust
-DATABASE_URL=postgres://username:password@localhost/table-name
+```toml
+[global.databases.postgres_logs]
+url = "postgres://username:password@localhost/table-name"
+timeout = 45
 ```
 
 Set this to the database url with the login credentials
